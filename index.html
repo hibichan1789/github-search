@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="src/style.css">
+        <script type="module" src="src/main.ts"></script>
+    </head>
+    <body>
+        <header>
+            <h1>GitHub Search App</h1>
+        </header>
+        <main>
+            <form>
+                <div class="search-form">
+                    <label for="username">ユーザー名:</label>
+                    <input type="text" id="username" name="username">
+                </div>
+                <div>
+                    <p id="search-state"></p>
+                </div>
+                <div>
+                    <button type="submit" id="search-button">検索</button>
+                </div>
+            </form>
+            <div id="user-area">
+            </div>
+            <div id="repo-area">
+            </div>
+        </main>
+    </body>
+</html>
