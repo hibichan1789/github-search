@@ -37,10 +37,12 @@ export function renderUser(user:GitHubUser):void{
 }
 
 export function renderRepos(repos:GitHubRepo[]):void{
-    const title = document.createElement("h3");
+    const title = document.createElement("h2");
     title.textContent = "Repositories";
     repoArea.appendChild(title);
 
+    const repoCards = document.createElement("div");
+    repoCards.classList.add("repo-cards");
     repos.forEach(repo=>{
         const repoItem = document.createElement("div");
         
@@ -65,8 +67,9 @@ export function renderRepos(repos:GitHubRepo[]):void{
         repoItem.appendChild(repoUrlPara);
         repoItem.appendChild(repoDescription);
         repoItem.appendChild(repoStargazers);
-        repoArea.appendChild(repoItem);
+        repoCards.appendChild(repoItem);
     });
+    repoArea.appendChild(repoCards)
 }
 
 export function createView():void{
